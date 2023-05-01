@@ -11,6 +11,7 @@ import Home_content from './components/home_content/Home_content.jsx';
 import Blog from './components/Blog/Blog.jsx';
 import About from './components/About/About.jsx';
 import Login from './components/login/Login.jsx';
+import Register from './components/register/Register.jsx';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: "login",
     element: <Login></Login>
+  },
+  {
+    path: "register",
+    element: <Register></Register>
   }
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
