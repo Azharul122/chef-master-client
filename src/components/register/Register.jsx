@@ -1,16 +1,44 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import AuthProvider, { AuthContext } from '../../Provider/AuthProvider';
+import { updateCurrentUser, updateProfile } from 'firebase/auth';
+
 // import { faGoogle } from '@fortawesome/free-solid-svg-icons'
 
 const Register = () => {
+    const {createUser}=useContext(AuthContext)
+
+    const handleRegister=event=>{
+        event.preventDefault();
+       const name=event.target.name.value;
+       const photo=event.target.photo.value;
+       const email=event.target.email.value;
+       const password=event.target.userPassword.value;
+
+
+
+   
+       createUser(name,email,password)
+       .then(result=>{
+        const createdUser=result.user;
+        updateProfile(createdUser, {
+            displayName: name, photoURL: photo
+          })
+             console.log(createdUser)
+       
+       })
+       .catch(error=>{
+        console.log(error)
+       })
+    }
     return (
         <div className="h-[100vh] flex justify-center items-center">
-            <form className="w-[80%] md:w-[50%] mx-auto ">
+            <form onSubmit={handleRegister} className="w-[80%] md:w-[50%] mx-auto ">
                 <div className="mb-6">
                     <label
-                        for="name"
+                        htmlFor="name"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
                         Your Name
@@ -18,7 +46,7 @@ const Register = () => {
                     <input
                         type="text"
                         id="name"
-                        name='userName'
+                        name='name'
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="Enter name"
                         required
@@ -26,7 +54,7 @@ const Register = () => {
                 </div>
                 <div className="mb-6">
                     <label
-                        for="email"
+                        htmlFor="photo"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
                         Your Photo URL
@@ -34,7 +62,7 @@ const Register = () => {
                     <input
                         type="text"
                         id="photo"
-                        name='userPhoto'
+                        name='photo'
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="Enter Photo URL"
                         required
@@ -42,7 +70,7 @@ const Register = () => {
                 </div>
                 <div className="mb-6">
                     <label
-                        for="email"
+                        htmlFor="email"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
                         Your email
@@ -50,7 +78,7 @@ const Register = () => {
                     <input
                         type="email"
                         id="email"
-                        name='userEmail'
+                        name='email'
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="Enter email"
                         required
@@ -58,7 +86,7 @@ const Register = () => {
                 </div>
                 <div className="mb-6">
                     <label
-                        for="password"
+                        htmlFor="password"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
                         Your password

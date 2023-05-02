@@ -1,13 +1,32 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
+const {signIn}=useContext(AuthContext)
+const navigate=useNavigate()
+
+    const handleLogin=event=>{
+        event.preventDefault()
+        const email=event.target.email.value;
+        const password=event.target.password.value;
+        console.log(email,password)
+        signIn(email,password)
+       .then(result=>{
+        const loggeduser=result.user;
+        navigate("/")
+        console.log(loggeduser)
+       })
+       .catch(error=>{
+        console.log(error)
+       })
+    }
     return (
         <div className="h-[100vh] flex justify-center items-center">
-            <form className="w-[80%] md:w-[50%] mx-auto ">
+            <form className="w-[80%] md:w-[50%] mx-auto " onSubmit={handleLogin}>
                 <div className="mb-6">
                     <label
-                        for="email"
+                    htmlFor="email"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
                         Your email
@@ -15,6 +34,7 @@ const Login = () => {
                     <input
                         type="email"
                         id="email"
+                        name="email"
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="name@flowbite.com"
                         required
@@ -22,7 +42,7 @@ const Login = () => {
                 </div>
                 <div className="mb-6">
                     <label
-                        for="password"
+                    htmlFor="password"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
                         Your password
@@ -30,6 +50,7 @@ const Login = () => {
                     <input
                         type="password"
                         id="password"
+                        name="password"
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         required
                     ></input>

@@ -12,6 +12,10 @@ import Blog from './components/Blog/Blog.jsx';
 import About from './components/About/About.jsx';
 import Login from './components/login/Login.jsx';
 import Register from './components/register/Register.jsx';
+import AuthProvider from './Provider/AuthProvider.jsx';
+
+import PrivateRoute from './route/privateRoute.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -28,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/blog",
-        element:<Blog></Blog>
+        element:<PrivateRoute><Blog></Blog></PrivateRoute>
       }
     ]
   },
@@ -43,6 +47,8 @@ const router = createBrowserRouter([
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <RouterProvider router={router} />
+    <AuthProvider>
+    <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
