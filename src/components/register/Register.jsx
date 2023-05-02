@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ReactDOM from "react-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,6 +15,8 @@ import {
 // import { faGoogle } from '@fortawesome/free-solid-svg-icons'
 
 const Register = () => {
+    const [error,setError]=useState("");
+
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
   const GithubProvider = new GithubAuthProvider();
@@ -48,22 +50,34 @@ const Register = () => {
     const email = event.target.email.value;
     const password = event.target.userPassword.value;
 
-    createUser(name, email, password)
-      .then((result) => {
-        const createdUser = result.user;
-        updateProfile(createdUser, {
-          displayName: name,
-          photoURL: photo,
+    if(!name || !photo || !email || !password){
+      return  setError("All fields must requird")
+    }
+    else if(password.length<6){
+       return setError("Password must be 6 charcter or more")
+    }
+    else{
+        createUser(name, email, password)
+        .then((result) => {
+          const createdUser = result.user;
+          updateProfile(createdUser, {
+            displayName: name,
+            photoURL: photo,
+          });
+          console.log(createdUser);
+        })
+        .catch((error) => {
+          console.log(error);
         });
-        console.log(createdUser);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+        nevigate("/login");
+    }
+
+
   };
   return (
     <div className="h-[100vh] flex justify-center items-center flex-col">
       <form onSubmit={handleRegister} className="w-[80%] md:w-[50%] mx-auto ">
+        <p id="handleMessage" className="w-[80%] mx-auto py-2 bg-[#374151] text-red-600 text-center">{error}</p>
         <div className="mb-6">
           <label
             htmlFor="name"
@@ -77,7 +91,7 @@ const Register = () => {
             name="name"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Enter name"
-            required
+            
           ></input>
         </div>
         <div className="mb-6">
@@ -93,7 +107,7 @@ const Register = () => {
             name="photo"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Enter Photo URL"
-            required
+            
           ></input>
         </div>
         <div className="mb-6">
@@ -109,7 +123,7 @@ const Register = () => {
             name="email"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Enter email"
-            required
+            
           ></input>
         </div>
         <div className="mb-6">
@@ -125,7 +139,7 @@ const Register = () => {
             name="userPassword"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Enter password"
-            required
+            
           ></input>
         </div>
         <div className="flex items-start mb-6">
