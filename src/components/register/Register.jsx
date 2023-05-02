@@ -1,15 +1,30 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import AuthProvider, { AuthContext } from '../../Provider/AuthProvider';
-import { updateCurrentUser, updateProfile } from 'firebase/auth';
+import { getAuth, updateCurrentUser, updateProfile ,signInWithPopup, GoogleAuthProvider} from 'firebase/auth';
 
 // import { faGoogle } from '@fortawesome/free-solid-svg-icons'
 
 const Register = () => {
+    const auth=getAuth();
+const googleProvider=new GoogleAuthProvider();
     const {createUser}=useContext(AuthContext)
+    const nevigate=useNavigate()
+    const handleGoogleSignUp=()=>{
+        signInWithPopup(auth,googleProvider)
+        .then(result=>{
+            const user=result.user;
+            nevigate("/")
+        })
+        .then(error=>{
+            console.log(error)
+        })
+    }
+    const handleGithubSignUp=()=>{
 
+    }
     const handleRegister=event=>{
         event.preventDefault();
        const name=event.target.name.value;
@@ -34,7 +49,7 @@ const Register = () => {
        })
     }
     return (
-        <div className="h-[100vh] flex justify-center items-center">
+        <div className="h-[100vh] flex justify-center items-center flex-col">
             <form onSubmit={handleRegister} className="w-[80%] md:w-[50%] mx-auto ">
                 <div className="mb-6">
                     <label
@@ -109,25 +124,26 @@ const Register = () => {
                 >
                     Sign Up
                 </button>
-                <div className="flex flex-col w-full border-opacity-50">
+
+                    
+          
+
+            </form>
+            <div className="flex flex-col w-full border-opacity-50">
                     <div className="divider">Continue with</div>
                    
                       
                     <div className="flex gap-2 items-center justify-center">
-                    <button className='flex justify-center items-center gap-2 py-2 px-3 bg-[#374151] rounded'>
+                    <button onClick={handleGoogleSignUp} className='flex justify-center items-center gap-2 py-2 px-3 bg-[#374151] rounded'>
                        <img src="https://img.freepik.com/premium-psd/google-icon-isolated_68185-565.jpg?w=360" className='w-[30px] h-[30px] ' alt="" />
                         Google
                        </button>
-                       <button className='flex justify-center items-center gap-2 py-2 px-3 bg-[#374151] rounded'>
+                       <button onClick={handleGithubSignUp} className='flex justify-center items-center gap-2 py-2 px-3 bg-[#374151] rounded'>
                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" className='w-[30px] h-[30px] ' alt="" />
                         Github
                        </button>
                     </div>
                     </div>
-                    
-          
-
-            </form>
         </div>
     );
 };
