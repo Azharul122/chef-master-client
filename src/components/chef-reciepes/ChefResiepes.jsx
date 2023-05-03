@@ -1,21 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const ChefResiepes = () => {
 
     const { id } = useParams()
-
-    const [singlechef, setSinglechef] = useState()
     const [reciepsd, setReciepe] = useState([])
     const [chefs,setChefs]=useState([])
-
-    // useEffect(()=>{
-    //     fetch(`http://localhost:5000/specificChef/${sid}`)
-    //     .then(res=>res.json())
-    //     .then(data=>setSinglechef(data))
-    // },[])
-
+    
     useEffect(() => {
         fetch(`http://localhost:5000/chef/${id}`)
             .then(res => res.json())
@@ -29,9 +23,15 @@ const ChefResiepes = () => {
     }, [])
     // console.log(singlechef.chefExperience)
     const singChef=chefs.filter(che=>che.chefId==id)
-    console.log(singChef)
+
+//disable button and display toast
+    const disbleme=(event)=>{
+        toast("Added to favorite")
+        event.currentTarget.disabled = true;
+    }
     return (
         <div>
+             <ToastContainer />
             <section className="">
                 {
                     singChef.map(chef=>
@@ -69,7 +69,8 @@ const ChefResiepes = () => {
                     
                             <div className="flex justify-between items-center mt-2">
                                 <p>Rating:<span>{rec.rating}</span></p>
-                                <FontAwesomeIcon icon={faBookmark} className='text-lg md:text-xl'/>
+                               
+                                <button className='py-2 px-2 bg-[#374151]' onClick={disbleme} id='bttn'>Add to wishList</button>
                             </div>
                         </div>
                     )
