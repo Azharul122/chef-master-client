@@ -13,6 +13,7 @@ import AuthProvider from "./Provider/AuthProvider.jsx";
 
 import PrivateRoute from "./route/privateRoute.jsx";
 import ChefResiepes from "./components/chef-reciepes/ChefResiepes.jsx";
+import Error from "./components/404/Error.jsx";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
     path: "register",
     element: <Register></Register>,
   },
+  {
+    path:"*",
+    element:<Error></Error>
+  }
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
