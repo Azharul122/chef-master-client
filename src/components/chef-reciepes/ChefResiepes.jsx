@@ -28,6 +28,8 @@ const ChefResiepes = () => {
     const disbleme=(event)=>{
         toast("Added to favorite")
         event.currentTarget.disabled = true;
+        event.currentTarget.style.backgroundColor="red"
+        event.currentTarget.style.color="white"
     }
     return (
         <div>

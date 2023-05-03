@@ -23,7 +23,7 @@ const Home_content = () => {
 const popularRcipe=reciepsd.filter(rec=>rec.ispular==true)
   return (
     <div>
-      <section className=" md:container md:mx-auto grid grid-cols-3 gap-4">
+      <section className=" md:container md:mx-auto grid grid-cols-3 gap-4 py-3 md:py-7">
         {chef.map((ch) => (
           <div
             className="card border p-2 md:p-5 shadow shadow-blue-500"
@@ -39,7 +39,10 @@ const popularRcipe=reciepsd.filter(rec=>rec.ispular==true)
             />
             <h2 className="text-xl md:text-2xl mb-2">{ch.chefName}</h2>
             <div className="flex justify-between items-center mb-2">
-              <p>reciepe makes: {4}</p>
+              <p>reciepe makes: {reciepsd.filter(reci=>reci.chefId==ch.chefId).length}</p>
+              {
+                
+              }
               <p>Experience:{ch.chefExperience}</p>
             </div>
             <div className="flex justify-between items-center">
@@ -135,7 +138,7 @@ const popularRcipe=reciepsd.filter(rec=>rec.ispular==true)
             </div>
             <button
               type="submit"
-              className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+              className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-[#3e4a5e] sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
             >
               Send message
             </button>
