@@ -1,0 +1,338 @@
+[
+    {
+        "chef_name":"marsal eli",
+        "chelf_experince":"10 years",
+        "chelf_id":1,
+        "number_of_reciepe":4,
+        "likes":120,
+        "chelf_photo":"https://images.pexels.com/photos/3814446/pexels-photo-3814446.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "reciepes":[
+            {
+                "reciepieId":"55",
+                "reciepeName":"Mutton Curry with Potatoes",
+                "ingredients":["Mutton","Potatoes","Extra virgin oil","tomatos",""],
+                "cooking_method":"This mutton curry is very traditional in every home of Bangladesh. This village-style recipe consists of very common spices avoiding use of a lot of spices for easy and fast cooking.",
+                "rati8ng":5,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2020/02/khasir-mangsho-alu-diye-mutton-curry-800x475.jpg"
+            },
+            {
+                "reciepieId":"5",
+                "reciepeName":"Homestyle Chicken Korma",
+                "ingredients":["2 pounds bone-in chicken (dark meat best)","2 medium onions,  peeled","1.5  inch of ginger, chopped","4 cloves garlic, chopped","½ cup whole-milk yogurt","4 to 6 green cardamom pods"],
+                "cooking_method":" love my Kormas. Most of all I love Bangladeshi Kormas, which tend to be lightly spiced but heavily flavored. We do not put a lot of heavy cream like the Indian version but prefer onions and ghee to give the creaminess. I came across this recipe in the New York Times via Shama Mubdi",
+                "rati8ng":4.3,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2017/05/Homestyle-Chicken-Korma-800x475.png"
+            },
+            {
+                "reciepieId":"57",
+                "reciepeName":"Chicken Pakora",
+                "ingredients":["2 regular size boneless chicken breasts, washed and finely chopped"," tbsp ginger paste","1 tsp garlic paste","1/2 tsp garam masala powder","1/2 tsp salt"],
+                "cooking_method":"Marinate the chicken with ginger, garlic, garam masala and lime juice. Keep aside for 2 hours (can also be marinated overnight, or in the morning to fry in the afternoon/evening, in that case, add lime juice a few hours before frying).",
+                "rati8ng":4.6,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2014/11/image-1200x715.jpg"
+            },
+            {
+                "reciepieId":"56",
+                "reciepeName":"Spicy Dry Chicken – Kosha Murgir Mangsho",
+                "ingredients":["Chicken 100 grams. A whole chicken cut up into 8-10 pieces will work gret"," 1/2 cup mustard oil","4 bay leaves","1/2 tsp salt","4-6 dried red chilies"],
+                "cooking_method":"This may just be the tastiest chicken dish I’ve ever cooked. Yes, this is high praise, even if I’m saying it myself. Kosha is a semi-dry curry, where the chicken is cooked slowly with the spices over a long period of time. I consider this manual slow cooking. While labor intensive",
+                "rati8ng":4.6,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2014/11/image-1200x715.jpg"
+            }
+        ]
+    },
+    {
+        "chef_name":"eroma desi",
+        "chelf_experince":"8 years +",
+        "chelf_id":2,
+        "number_of_reciepe":4,
+        "likes":120,
+        "chelf_photo":"https://images.pexels.com/photos/3351927/pexels-photo-3351927.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "reciepes":[
+            {
+                "reciepieId":"2",
+                "reciepeName":"Mutton Curry with Potatoes",
+                "ingredients":["Mutton","Potatoes","Extra virgin oil","tomatos",""],
+                "cooking_method":"This mutton curry is very traditional in every home of Bangladesh. This village-style recipe consists of very common spices avoiding use of a lot of spices for easy and fast cooking.",
+                "rati8ng":5,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2020/02/khasir-mangsho-alu-diye-mutton-curry-800x475.jpg"
+            },
+            {
+                "reciepieId":"3",
+                "reciepeName":"Homestyle Chicken Korma",
+                "ingredients":["2 pounds bone-in chicken (dark meat best)","2 medium onions,  peeled","1.5  inch of ginger, chopped","4 cloves garlic, chopped","½ cup whole-milk yogurt","4 to 6 green cardamom pods"],
+                "cooking_method":" love my Kormas. Most of all I love Bangladeshi Kormas, which tend to be lightly spiced but heavily flavored. We do not put a lot of heavy cream like the Indian version but prefer onions and ghee to give the creaminess. I came across this recipe in the New York Times via Shama Mubdi",
+                "rati8ng":4.3,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2017/05/Homestyle-Chicken-Korma-800x475.png"
+            },
+            {
+                "reciepieId":"6",
+                "reciepeName":"Chicken Pakora",
+                "ingredients":["2 regular size boneless chicken breasts, washed and finely chopped"," tbsp ginger paste","1 tsp garlic paste","1/2 tsp garam masala powder","1/2 tsp salt"],
+                "cooking_method":"Marinate the chicken with ginger, garlic, garam masala and lime juice. Keep aside for 2 hours (can also be marinated overnight, or in the morning to fry in the afternoon/evening, in that case, add lime juice a few hours before frying).",
+                "rati8ng":4.6,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2014/11/image-1200x715.jpg"
+            },
+            {
+                "reciepieId":"4",
+                "reciepeName":"Spicy Dry Chicken – Kosha Murgir Mangsho",
+                "ingredients":["Chicken 100 grams. A whole chicken cut up into 8-10 pieces will work gret"," 1/2 cup mustard oil","4 bay leaves","1/2 tsp salt","4-6 dried red chilies"],
+                "cooking_method":"This may just be the tastiest chicken dish I’ve ever cooked. Yes, this is high praise, even if I’m saying it myself. Kosha is a semi-dry curry, where the chicken is cooked slowly with the spices over a long period of time. I consider this manual slow cooking. While labor intensive",
+                "rati8ng":4.6,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2014/11/image-1200x715.jpg"
+            }
+        ]
+    },
+    {
+        "chef_name":"david wisa",
+        "chelf_experince":"12 Years",
+        "chelf_id":3,
+        "number_of_reciepe":4,
+        "likes":456,
+        "chelf_photo":"https://images.pexels.com/photos/4252137/pexels-photo-4252137.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "reciepes":[
+            {
+                "reciepieId":"7",
+                "reciepeName":"Mutton Curry with Potatoes",
+                "ingredients":["Mutton","Potatoes","Extra virgin oil","tomatos",""],
+                "cooking_method":"This mutton curry is very traditional in every home of Bangladesh. This village-style recipe consists of very common spices avoiding use of a lot of spices for easy and fast cooking.",
+                "rati8ng":5,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2020/02/khasir-mangsho-alu-diye-mutton-curry-800x475.jpg"
+            },
+            {
+                "reciepieId":"8",
+                "reciepeName":"Homestyle Chicken Korma",
+                "ingredients":["2 pounds bone-in chicken (dark meat best)","2 medium onions,  peeled","1.5  inch of ginger, chopped","4 cloves garlic, chopped","½ cup whole-milk yogurt","4 to 6 green cardamom pods"],
+                "cooking_method":" love my Kormas. Most of all I love Bangladeshi Kormas, which tend to be lightly spiced but heavily flavored. We do not put a lot of heavy cream like the Indian version but prefer onions and ghee to give the creaminess. I came across this recipe in the New York Times via Shama Mubdi",
+                "rati8ng":4.3,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2017/05/Homestyle-Chicken-Korma-800x475.png"
+            },
+            {
+                "reciepieId":"9",
+                "reciepeName":"Chicken Pakora",
+                "ingredients":["2 regular size boneless chicken breasts, washed and finely chopped"," tbsp ginger paste","1 tsp garlic paste","1/2 tsp garam masala powder","1/2 tsp salt"],
+                "cooking_method":"Marinate the chicken with ginger, garlic, garam masala and lime juice. Keep aside for 2 hours (can also be marinated overnight, or in the morning to fry in the afternoon/evening, in that case, add lime juice a few hours before frying).",
+                "rati8ng":4.6,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2014/11/image-1200x715.jpg"
+            },
+            {
+                "reciepieId":"10",
+                "reciepeName":"Spicy Dry Chicken – Kosha Murgir Mangsho",
+                "ingredients":["Chicken 100 grams. A whole chicken cut up into 8-10 pieces will work gret"," 1/2 cup mustard oil","4 bay leaves","1/2 tsp salt","4-6 dried red chilies"],
+                "cooking_method":"This may just be the tastiest chicken dish I’ve ever cooked. Yes, this is high praise, even if I’m saying it myself. Kosha is a semi-dry curry, where the chicken is cooked slowly with the spices over a long period of time. I consider this manual slow cooking. While labor intensive",
+                "rati8ng":4.6,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2014/11/image-1200x715.jpg"
+            }
+        ]
+    },
+    {
+        "chef_name":"marathon hell",
+        "chelf_experince":"20 Years",
+        "chelf_id":4,
+        "number_of_reciepe":4,
+        "likes":3545,
+        "chelf_photo":"https://images.pexels.com/photos/3338536/pexels-photo-3338536.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "reciepes":[
+            {
+                "reciepieId":"11",
+                "reciepeName":"Mutton Curry with Potatoes",
+                "ingredients":["Mutton","Potatoes","Extra virgin oil","tomatos",""],
+                "cooking_method":"This mutton curry is very traditional in every home of Bangladesh. This village-style recipe consists of very common spices avoiding use of a lot of spices for easy and fast cooking.",
+                "rati8ng":5,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2014/10/garliccabbage-800x475.png"
+            },
+            {
+                "reciepieId":"12",
+                "reciepeName":"Homestyle Chicken Korma",
+                "ingredients":["2 pounds bone-in chicken (dark meat best)","2 medium onions,  peeled","1.5  inch of ginger, chopped","4 cloves garlic, chopped","½ cup whole-milk yogurt","4 to 6 green cardamom pods"],
+                "cooking_method":" love my Kormas. Most of all I love Bangladeshi Kormas, which tend to be lightly spiced but heavily flavored. We do not put a lot of heavy cream like the Indian version but prefer onions and ghee to give the creaminess. I came across this recipe in the New York Times via Shama Mubdi",
+                "rati8ng":4.3,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2014/10/grilledyogurtchicken-800x475.png"
+            },
+            {
+                "reciepieId":"13",
+                "reciepeName":"Chicken Pakora",
+                "ingredients":["2 regular size boneless chicken breasts, washed and finely chopped"," tbsp ginger paste","1 tsp garlic paste","1/2 tsp garam masala powder","1/2 tsp salt"],
+                "cooking_method":"Marinate the chicken with ginger, garlic, garam masala and lime juice. Keep aside for 2 hours (can also be marinated overnight, or in the morning to fry in the afternoon/evening, in that case, add lime juice a few hours before frying).",
+                "rati8ng":4.6,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2014/11/image-1200x715.jpg"
+            },
+            {
+                "reciepieId":"14",
+                "reciepeName":"Spicy Dry Chicken – Kosha Murgir Mangsho",
+                "ingredients":["Chicken 100 grams. A whole chicken cut up into 8-10 pieces will work gret"," 1/2 cup mustard oil","4 bay leaves","1/2 tsp salt","4-6 dried red chilies"],
+                "cooking_method":"This may just be the tastiest chicken dish I’ve ever cooked. Yes, this is high praise, even if I’m saying it myself. Kosha is a semi-dry curry, where the chicken is cooked slowly with the spices over a long period of time. I consider this manual slow cooking. While labor intensive",
+                "rati8ng":4.6,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2014/11/image-1200x715.jpg"
+            }
+        ]
+    },
+    {
+        "chef_name":"resal fal",
+        "chelf_experince":"11 Years",
+        "chelf_id":5,
+        "number_of_reciepe":4,
+        "likes":345,
+        "chelf_photo":"https://images.pexels.com/photos/916416/pexels-photo-916416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "reciepes":[
+            {
+                "reciepieId":"15",
+                "reciepeName":"Mutton Curry with Potatoes",
+                "ingredients":["Mutton","Potatoes","Extra virgin oil","tomatos",""],
+                "cooking_method":"This mutton curry is very traditional in every home of Bangladesh. This village-style recipe consists of very common spices avoiding use of a lot of spices for easy and fast cooking.",
+                "rati8ng":5,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2014/10/KataMoshlarMangsho-800x475.png"
+            },
+            {
+                "reciepieId":"16",
+                "reciepeName":"Homestyle Chicken Korma",
+                "ingredients":["2 pounds bone-in chicken (dark meat best)","2 medium onions,  peeled","1.5  inch of ginger, chopped","4 cloves garlic, chopped","½ cup whole-milk yogurt","4 to 6 green cardamom pods"],
+                "cooking_method":" love my Kormas. Most of all I love Bangladeshi Kormas, which tend to be lightly spiced but heavily flavored. We do not put a lot of heavy cream like the Indian version but prefer onions and ghee to give the creaminess. I came across this recipe in the New York Times via Shama Mubdi",
+                "rati8ng":4.3,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2017/05/Homestyle-Chicken-Korma-800x475.png"
+            },
+            {
+                "reciepieId":"17",
+                "reciepeName":"Chicken Pakora",
+                "ingredients":["2 regular size boneless chicken breasts, washed and finely chopped"," tbsp ginger paste","1 tsp garlic paste","1/2 tsp garam masala powder","1/2 tsp salt"],
+                "cooking_method":"Marinate the chicken with ginger, garlic, garam masala and lime juice. Keep aside for 2 hours (can also be marinated overnight, or in the morning to fry in the afternoon/evening, in that case, add lime juice a few hours before frying).",
+                "rati8ng":4.6,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2010/02/shahi_rezala.jpg"
+            },
+            {
+                "reciepieId":"18",
+                "reciepeName":"Spicy Dry Chicken – Kosha Murgir Mangsho",
+                "ingredients":["Chicken 100 grams. A whole chicken cut up into 8-10 pieces will work gret"," 1/2 cup mustard oil","4 bay leaves","1/2 tsp salt","4-6 dried red chilies"],
+                "cooking_method":"This may just be the tastiest chicken dish I’ve ever cooked. Yes, this is high praise, even if I’m saying it myself. Kosha is a semi-dry curry, where the chicken is cooked slowly with the spices over a long period of time. I consider this manual slow cooking. While labor intensive",
+                "rati8ng":4.6,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2014/11/image-1200x715.jpg"
+            }
+        ]
+    },
+    {
+        "chef_name":"neiji hat",
+        "chelf_experince":"23",
+        "chelf_id":6,
+        "number_of_reciepe":4,
+        "likes":352,
+        "chelf_photo":"https://images.pexels.com/photos/4253302/pexels-photo-4253302.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "reciepes":[
+            {
+                "reciepieId":"19",
+                "reciepeName":"Mutton Curry with Potatoes",
+                "ingredients":["Mutton","Potatoes","Extra virgin oil","tomatos",""],
+                "cooking_method":"This mutton curry is very traditional in every home of Bangladesh. This village-style recipe consists of very common spices avoiding use of a lot of spices for easy and fast cooking.",
+                "rati8ng":5,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2010/02/fishyogurtsauce.jpg"
+            },
+            {
+                "reciepieId":"20",
+                "reciepeName":"Homestyle Chicken Korma",
+                "ingredients":["2 pounds bone-in chicken (dark meat best)","2 medium onions,  peeled","1.5  inch of ginger, chopped","4 cloves garlic, chopped","½ cup whole-milk yogurt","4 to 6 green cardamom pods"],
+                "cooking_method":" love my Kormas. Most of all I love Bangladeshi Kormas, which tend to be lightly spiced but heavily flavored. We do not put a lot of heavy cream like the Indian version but prefer onions and ghee to give the creaminess. I came across this recipe in the New York Times via Shama Mubdi",
+                "rati8ng":4.3,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2017/05/Homestyle-Chicken-Korma-800x475.png"
+            },
+            {
+                "reciepieId":"21",
+                "reciepeName":"Chicken Pakora",
+                "ingredients":["2 regular size boneless chicken breasts, washed and finely chopped"," tbsp ginger paste","1 tsp garlic paste","1/2 tsp garam masala powder","1/2 tsp salt"],
+                "cooking_method":"Marinate the chicken with ginger, garlic, garam masala and lime juice. Keep aside for 2 hours (can also be marinated overnight, or in the morning to fry in the afternoon/evening, in that case, add lime juice a few hours before frying).",
+                "rati8ng":4.6,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2014/11/image-1200x715.jpg"
+            },
+            {
+                "reciepieId":"22",
+                "reciepeName":"Spicy Dry Chicken – Kosha Murgir Mangsho",
+                "ingredients":["Chicken 100 grams. A whole chicken cut up into 8-10 pieces will work gret"," 1/2 cup mustard oil","4 bay leaves","1/2 tsp salt","4-6 dried red chilies"],
+                "cooking_method":"This may just be the tastiest chicken dish I’ve ever cooked. Yes, this is high praise, even if I’m saying it myself. Kosha is a semi-dry curry, where the chicken is cooked slowly with the spices over a long period of time. I consider this manual slow cooking. While labor intensive",
+                "rati8ng":4.6,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2014/10/basmati-800x475.jpg"
+            }
+        ]
+    }, {
+        "chef_name":"halton ledu",
+        "chelf_experince":"7 years +",
+        "chelf_id":7,
+        "number_of_reciepe":4,
+        "likes":120,
+        "chelf_photo":"https://images.pexels.com/photos/4252136/pexels-photo-4252136.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "reciepes":[
+            {
+                "reciepieId":"23",
+                "reciepeName":"Mutton Curry with Potatoes",
+                "ingredients":["Mutton","Potatoes","Extra virgin oil","tomatos",""],
+                "cooking_method":"This mutton curry is very traditional in every home of Bangladesh. This village-style recipe consists of very common spices avoiding use of a lot of spices for easy and fast cooking.",
+                "rati8ng":5,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2020/02/khasir-mangsho-alu-diye-mutton-curry-800x475.jpg"
+            },
+            {
+                "reciepieId":"24",
+                "reciepeName":"Homestyle Chicken Korma",
+                "ingredients":["2 pounds bone-in chicken (dark meat best)","2 medium onions,  peeled","1.5  inch of ginger, chopped","4 cloves garlic, chopped","½ cup whole-milk yogurt","4 to 6 green cardamom pods"],
+                "cooking_method":" love my Kormas. Most of all I love Bangladeshi Kormas, which tend to be lightly spiced but heavily flavored. We do not put a lot of heavy cream like the Indian version but prefer onions and ghee to give the creaminess. I came across this recipe in the New York Times via Shama Mubdi",
+                "rati8ng":4.3,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2014/10/BhunaKhichuri-800x475.png"
+            },
+            {
+                "reciepieId":"25",
+                "reciepeName":"Chicken Pakora",
+                "ingredients":["2 regular size boneless chicken breasts, washed and finely chopped"," tbsp ginger paste","1 tsp garlic paste","1/2 tsp garam masala powder","1/2 tsp salt"],
+                "cooking_method":"Marinate the chicken with ginger, garlic, garam masala and lime juice. Keep aside for 2 hours (can also be marinated overnight, or in the morning to fry in the afternoon/evening, in that case, add lime juice a few hours before frying).",
+                "rati8ng":4.6,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2014/11/image-1200x715.jpg"
+            },
+            {
+                "reciepieId":"26",
+                "reciepeName":"Spicy Dry Chicken – Kosha Murgir Mangsho",
+                "ingredients":["Chicken 100 grams. A whole chicken cut up into 8-10 pieces will work gret"," 1/2 cup mustard oil","4 bay leaves","1/2 tsp salt","4-6 dried red chilies"],
+                "cooking_method":"This may just be the tastiest chicken dish I’ve ever cooked. Yes, this is high praise, even if I’m saying it myself. Kosha is a semi-dry curry, where the chicken is cooked slowly with the spices over a long period of time. I consider this manual slow cooking. While labor intensive",
+                "rati8ng":4.6,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2009/07/okra.jpg"
+            }
+        ]
+    },
+    {
+        "chef_name":"detal kim",
+        "chelf_experince":"10 years",
+        "chelf_id":8,
+        "number_of_reciepe":4,
+        "likes":456,
+        "chelf_photo":"https://images.pexels.com/photos/14811401/pexels-photo-14811401.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "reciepes":[
+            {
+                "reciepieId":"27",
+                "reciepeName":"Mutton Curry with Potatoes",
+                "ingredients":["Mutton","Potatoes","Extra virgin oil","tomatos",""],
+                "cooking_method":"This mutton curry is very traditional in every home of Bangladesh. This village-style recipe consists of very common spices avoiding use of a lot of spices for easy and fast cooking.",
+                "rati8ng":5,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2014/10/TikiyaKabab1-800x475.png"
+            },
+            {
+                "reciepieId":"28",
+                "reciepeName":"Homestyle Chicken Korma",
+                "ingredients":["2 pounds bone-in chicken (dark meat best)","2 medium onions,  peeled","1.5  inch of ginger, chopped","4 cloves garlic, chopped","½ cup whole-milk yogurt","4 to 6 green cardamom pods"],
+                "cooking_method":" love my Kormas. Most of all I love Bangladeshi Kormas, which tend to be lightly spiced but heavily flavored. We do not put a lot of heavy cream like the Indian version but prefer onions and ghee to give the creaminess. I came across this recipe in the New York Times via Shama Mubdi",
+                "rati8ng":4.3,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2017/05/Homestyle-Chicken-Korma-800x475.png"
+            },
+            {
+                "reciepieId":"29",
+                "reciepeName":"Chicken Pakora",
+                "ingredients":["2 regular size boneless chicken breasts, washed and finely chopped"," tbsp ginger paste","1 tsp garlic paste","1/2 tsp garam masala powder","1/2 tsp salt"],
+                "cooking_method":"Marinate the chicken with ginger, garlic, garam masala and lime juice. Keep aside for 2 hours (can also be marinated overnight, or in the morning to fry in the afternoon/evening, in that case, add lime juice a few hours before frying).",
+                "rati8ng":4.6,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2009/09/vindaloo.jpg"
+            },
+            {
+                "reciepieId":"30",
+                "reciepeName":"Spicy Dry Chicken – Kosha Murgir Mangsho",
+                "ingredients":["Chicken 100 grams. A whole chicken cut up into 8-10 pieces will work gret"," 1/2 cup mustard oil","4 bay leaves","1/2 tsp salt","4-6 dried red chilies"],
+                "cooking_method":"This may just be the tastiest chicken dish I’ve ever cooked. Yes, this is high praise, even if I’m saying it myself. Kosha is a semi-dry curry, where the chicken is cooked slowly with the spices over a long period of time. I consider this manual slow cooking. While labor intensive",
+                "rati8ng":4.6,
+                "photo":"https://www.thebangladeshikitchen.com/wp-content/uploads/2014/11/image-1200x715.jpg"
+            }
+        ]
+    }
+
+]
