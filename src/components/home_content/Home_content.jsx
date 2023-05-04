@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
+import LazyLoad from "react-lazy-load";
 import { Link } from "react-router-dom";
+import Spinner from "../spinner/Spinner";
 
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faExper } from '@fortawesome/free-solid-svg-icons'
 const Home_content = () => {
   const [chef, setchef] = useState([]);
-  const [reciepsd, setReciepe] = useState([])
+  const [reciepsd, setReciepe] = useState([]);
 
   // const [chefName,chefExperience,chefId,numberOfreciepe,likes,chefPhoto]=chef
   useEffect(() => {
@@ -16,11 +18,11 @@ const Home_content = () => {
 
   useEffect(() => {
     fetch(`http://localhost:5000/chef/0`)
-        .then(res => res.json())
-        .then(data => setReciepe(data))
-}, [])
+      .then((res) => res.json())
+      .then((data) => setReciepe(data));
+  }, []);
 
-const popularRcipe=reciepsd.filter(rec=>rec.ispular==true)
+  const popularRcipe = reciepsd.filter((rec) => rec.ispular == true);
   return (
     <div>
       <section className=" md:container md:mx-auto grid grid-cols-3 gap-4 py-3 md:py-7">
@@ -32,17 +34,21 @@ const popularRcipe=reciepsd.filter(rec=>rec.ispular==true)
             {/* {
                                 console.log(ch)
                             } */}
-            <img
-              src={ch.chefPhoto}
-              alt=""
-              className="mb-2 h-[200px] w-[80%] md:w-[90%] mx-auto"
-            />
+            <LazyLoad threshold={1} onContentVisible={() => {<Spinner></Spinner>}}>
+              <img
+                src={ch.chefPhoto}
+                alt=""
+                className="mb-2 h-[200px] w-[80%] md:w-[90%] mx-auto"
+              />
+            </LazyLoad>
+
             <h2 className="text-xl md:text-2xl mb-2">{ch.chefName}</h2>
             <div className="flex justify-between items-center mb-2">
-              <p>reciepe makes: {reciepsd.filter(reci=>reci.chefId==ch.chefId).length}</p>
-              {
-                
-              }
+              <p>
+                reciepe makes:{" "}
+                {reciepsd.filter((reci) => reci.chefId == ch.chefId).length}
+              </p>
+              {}
               <p>Experience:{ch.chefExperience}</p>
             </div>
             <div className="flex justify-between items-center">
@@ -57,9 +63,11 @@ const popularRcipe=reciepsd.filter(rec=>rec.ispular==true)
           </div>
         ))}
       </section>
-        <div className="title container md:mx-auto">
-                        <p className="text-3xl text-center py-3 md:py-8 font-bold text-white">Popular Recipe</p>
-        </div>
+      <div className="title container md:mx-auto">
+        <p className="text-3xl text-center py-3 md:py-8 font-bold text-white">
+          Popular Recipe
+        </p>
+      </div>
       <section className=" md:container md:mx-auto grid grid-cols-3 gap-4">
         {popularRcipe.map((prec) => (
           <div
@@ -75,12 +83,9 @@ const popularRcipe=reciepsd.filter(rec=>rec.ispular==true)
               className="mb-2 h-[200px] w-[80%] md:w-[90%] mx-auto"
             />
             <h2 className="text-xl md:text-2xl mb-2">{prec.reciepeName}</h2>
-          
-
           </div>
         ))}
       </section>
-      
 
       <section className="bg-white dark:bg-gray-900">
         <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
