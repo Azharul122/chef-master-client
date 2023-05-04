@@ -30,7 +30,7 @@ const [message,setMessage]=useState("")
         <div className="h-[100vh] flex justify-center items-center">
             <form className="w-[80%] md:w-[50%] mx-auto " onSubmit={handleLogin}>
                 <div className="mb-6">
-                    <p className="text-center text-red-700 py-3">{ message }</p>
+                    <p className="text-center text-red-400 py-3 font-bold">{ message }</p>
                     <label
                     htmlFor="email"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"

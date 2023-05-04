@@ -14,8 +14,8 @@ const Header = () => {
   };
   //    console.log(user?.displayName)
   const userDetails = document.getElementById("userDetails");
-  const blockUserDetails = () => {
-    userDetails.style.display = "block";
+  const blockUserDetails = (event) => {
+   userDetails.style.display = "block";
   };
   const hideUserDetails = () => {
     userDetails.style.display = "none";
@@ -26,21 +26,25 @@ const Header = () => {
         <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
           <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
             <Link to={"/"} className="flex items-center">
-       
               <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
                 Chefs
               </span>
             </Link>
             <div className="flex items-center lg:order-2">
               {user ? (
-                <div className="flex">
-                  <img
-                    onMouseOver={blockUserDetails}
-                    src={user?.photoURL}
-                    alt=""
-                    className="w-[50px] h-[50px] rounded-full"
-                  />
-                </div>
+             <div className="flex">
+                 <div className="tooltip z-50" data-tip="hello">
+                <button className="btn">Hover me</button>
+              </div>
+              
+              <Link
+                      to={"/"}
+                      onClick={handleLogOut}
+                      className="text-gray-800 dark:text-white hover:white focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm md:text-md px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none bg-[#374151]"
+                    >
+                      Log Out
+                    </Link>
+             </div>
               ) : (
                 <Link
                   to={"login"}
@@ -114,20 +118,8 @@ const Header = () => {
           </div>
         </nav>
       </header>
-      <div
-        className="hidden userInfo absolute bg-black text-white py-5 px-3 right-9 text-center"
-        id="userDetails"
-        onMouseLeave={hideUserDetails}
-      >
-        <p className="text-md mb-4 z-40">{user?.displayName}</p>
-        <Link
-          to={"/"}
-          onClick={handleLogOut}
-          className="text-gray-800 dark:text-white hover:white focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm md:text-md px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none bg-[#374151]"
-        >
-          Log Out
-        </Link>
-      </div>
+ 
+
     </div>
   );
 };
