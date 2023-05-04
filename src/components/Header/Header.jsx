@@ -119,7 +119,7 @@ const Header = () => {
         id="userDetails"
         onMouseLeave={hideUserDetails}
       >
-        <p className="text-md mb-4">{user?.displayName}</p>
+        <p className="text-md mb-4 z-40">{user?.displayName}</p>
         <Link
           to={"/"}
           onClick={handleLogOut}

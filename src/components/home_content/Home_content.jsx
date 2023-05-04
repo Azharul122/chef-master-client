@@ -25,7 +25,7 @@ const Home_content = () => {
   const popularRcipe = reciepsd.filter((rec) => rec.ispular == true);
   return (
     <div>
-      <section className=" md:container md:mx-auto grid grid-cols-3 gap-4 py-3 md:py-7">
+      <section className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 py-3 md:py-7 w-[90%] md:w-[96%] ">
         {chef.map((ch) => (
           <div
             className="card border p-2 md:p-5 shadow shadow-blue-500"
@@ -68,10 +68,10 @@ const Home_content = () => {
           Popular Recipe
         </p>
       </div>
-      <section className=" md:container md:mx-auto grid grid-cols-3 gap-4">
+      <section className=" md:container md:mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
         {popularRcipe.map((prec) => (
           <div
-            className="card border p-2 md:p-5 shadow shadow-blue-500"
+            className="card border p-2 md:p-5 shadow shadow-blue-500 w-[90%] md:w-[96%] mx-auto"
             key={prec.chefId}
           >
             {/* {
