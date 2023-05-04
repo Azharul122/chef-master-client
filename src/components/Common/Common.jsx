@@ -9,7 +9,7 @@ const Common = () => {
     const nveigation = useNavigation();
     return (
         <div>
-            <div className="">{nveigation.state == 'loading' && <Spinner></Spinner>}</div>
+            <div className="">{nveigation.state == 'loading' ? <Spinner></Spinner>:""}</div>
             <Header></Header>
             <Outlet></Outlet>
             <Footer></Footer>

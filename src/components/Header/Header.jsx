@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import ActiveLink from "../activeLink/ActiveLink";
+import LazyLoad from "react-lazy-load";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -48,12 +49,14 @@ const Header = () => {
                   </Link>
                 </div>
               ) : (
+                <LazyLoad>
                 <Link
                   to={"login"}
                   className="text-gray-800 dark:text-white hover:white focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm md:text-md px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none bg-[#374151]"
                 >
                   Log in
                 </Link>
+                </LazyLoad>
               )}
 
               <button

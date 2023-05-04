@@ -11,13 +11,13 @@ const ChefResiepes = () => {
     const [chefs, setChefs] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/chef/${id}`)
+        fetch(`https://ass10-server-azharul122.vercel.app/chef/${id}`)
             .then(res => res.json())
             .then(data => setReciepe(data))
     }, [])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/chef/`)
+        fetch(`https://ass10-server-azharul122.vercel.app/chef/`)
             .then(res => res.json())
             .then(data => setChefs(data))
     }, [])
