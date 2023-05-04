@@ -39,15 +39,17 @@ const ChefResiepes = () => {
                     singChef.map(chef=>
                         <div key={chef.chefId} className='chef md:container md:mx-auto grid grid-cols-1 md:grid-cols-2 items-center py-3'>
                        <div className="">
-                        <img src={chef.chefPhoto} alt="" className='text-center h-[200px] md:h-[300px] mx-auto'/>
+                        <img src={chef.chefPhoto} alt="" className='text-center h-[200px] md:h-[300px] mx-auto rounded-lg'/>
                        </div>
                        <div className="">
-                        <p className=' font-bold'>Chef Name: </p><span>{chef.chefName}</span>
-                        <p className=''>Chef Experience: <span>{chef.chefExperience}</span></p>
-                        <p className=''>Number Of Reciepes: <span>{reciepsd.length}</span></p>
+                        <p className=' font-bold text-2xl pb-3 w-[80%] '>{chef.chefName}</p>
+                        <p>{chef.sortBio}</p>
+                        <p className='pb-3'>Chef Experience: <span>{chef.chefExperience}</span></p>
+                        <p className='pb-3'>Number Of Reciepes: <span>{reciepsd.length}</span></p>
                         <p className=''>Likes: <span>{chef.likes}</span></p>
                        </div>
                     </div>
+                    
                     
                     )
                 }
@@ -68,7 +70,8 @@ const ChefResiepes = () => {
                                     <li>{ingr}</li>
                                 </ul>)
                             }
-                    
+
+                            
                             <div className="flex justify-between items-center mt-2">
                                 <p>Rating:<span>{rec.rating}</span></p>
                                

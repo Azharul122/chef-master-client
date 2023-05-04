@@ -1,15 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
 const {signIn}=useContext(AuthContext)
 const navigate=useNavigate()
+const [message,setMessage]=useState("")
+
 
     const handleLogin=event=>{
         event.preventDefault()
         const email=event.target.email.value;
         const password=event.target.password.value;
+      
         console.log(email,password)
         signIn(email,password)
        .then(result=>{
@@ -18,13 +21,16 @@ const navigate=useNavigate()
         console.log(loggeduser)
        })
        .catch(error=>{
-        console.log(error)
+            setMessage("Email Password didin't matched")
        })
     }
+
+
     return (
         <div className="h-[100vh] flex justify-center items-center">
             <form className="w-[80%] md:w-[50%] mx-auto " onSubmit={handleLogin}>
                 <div className="mb-6">
+                    <p className="text-center text-red-700 py-3">{ message }</p>
                     <label
                     htmlFor="email"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
