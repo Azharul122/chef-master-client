@@ -3,31 +3,31 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
- 
-const {signIn}=useContext(AuthContext)
-const location =useLocation()
-console.log("login",location)
-const navigate=useNavigate()
-const from =location.state?.from?.pathname || "/"
 
-const [message,setMessage]=useState("")
+    const { signIn } = useContext(AuthContext)
+    const location = useLocation()
+    console.log("login", location)
+    const navigate = useNavigate()
+    const from = location.state?.from?.pathname || "/"
+
+    const [message, setMessage] = useState("")
 
 
-    const handleLogin=event=>{
+    const handleLogin = event => {
         event.preventDefault()
-        const email=event.target.email.value;
-        const password=event.target.password.value;
-      
-        console.log(email,password)
-        signIn(email,password)
-       .then(result=>{
-        const loggeduser=result.user;
-        navigate(from)
-        console.log(loggeduser)
-       })
-       .catch(error=>{
-            setMessage("Email Password didin't matched")
-       })
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+
+        console.log(email, password)
+        signIn(email, password)
+            .then(result => {
+                const loggeduser = result.user;
+                navigate(from)
+                console.log(loggeduser)
+            })
+            .catch(error => {
+                setMessage("Email Password didin't matched")
+            })
     }
 
 
@@ -35,9 +35,9 @@ const [message,setMessage]=useState("")
         <div className="h-[100vh] flex justify-center items-center">
             <form className="w-[80%] md:w-[50%] mx-auto " onSubmit={handleLogin}>
                 <div className="mb-6">
-                    <p className="text-center text-red-400 py-3 font-bold">{ message }</p>
+                    <p className="text-center text-red-400 py-3 font-bold">{message}</p>
                     <label
-                    htmlFor="email"
+                        htmlFor="email"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
                         Your email
@@ -53,7 +53,7 @@ const [message,setMessage]=useState("")
                 </div>
                 <div className="mb-6">
                     <label
-                    htmlFor="password"
+                        htmlFor="password"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
                         Your password
@@ -67,7 +67,7 @@ const [message,setMessage]=useState("")
                     ></input>
                 </div>
                 <div className="flex items-start mb-6">
-                <p className="">new to chef ? <Link to={"/register"}>Sighn Up</Link></p>
+                    <p className="">new to chef ? <Link to={"/register"}>Sighn Up</Link></p>
                 </div>
                 <button
                     type="submit"

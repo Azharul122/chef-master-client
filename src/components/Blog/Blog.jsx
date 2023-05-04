@@ -6,6 +6,7 @@ const Blog = () => {
   const ref = React.createRef();
   return (
     <div>
+      {/* PDF genarate */}
       <section className="w-full bg-[#1F2937] py-5 text-center text-white">
         <Pdf targetRef={ref} filename="code-example.pdf">
           {({ toPdf }) => (
@@ -14,13 +15,17 @@ const Blog = () => {
             </button>
           )}
         </Pdf>
-      
+
       </section>
+
+      {/* PDF design here */}
       <h2 className="text-5xl text-white text-center py-3">PDF design</h2>
       <div ref={ref} className="w-[80%]  mx-auto">
-          <h1 className="text-red-400 text-xl">Hello Boy</h1>
-          <h2>Start editing to see some magic happen!</h2>
-        </div>
+        <h1 className="text-red-400 text-xl">Hello Boy</h1>
+        <h2>Start editing to see some magic happen!</h2>
+      </div>
+
+      {/* FAQs section */}
       <div className="container my-24 px-6 mx-auto">
         <section className="mb-32 text-gray-800">
           <h2 className="text-3xl font-bold mb-6 pl-6">

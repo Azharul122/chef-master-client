@@ -1,21 +1,21 @@
 import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
-import ActiveLink from "../../activeLink/ActiveLink";
+import ActiveLink from "../activeLink/ActiveLink";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
   const handleLogOut = () => {
     logOut()
-      .then(() => {})
+      .then(() => { })
       .then((error) => {
         console.log(error);
       });
   };
-  //    console.log(user?.displayName)
+ 
   const userDetails = document.getElementById("userDetails");
   const blockUserDetails = (event) => {
-   userDetails.style.display = "block";
+    userDetails.style.display = "block";
   };
   const hideUserDetails = () => {
     userDetails.style.display = "none";
@@ -32,21 +32,21 @@ const Header = () => {
             </Link>
             <div className="flex items-center lg:order-2">
               {user ? (
-             <div className="flex gap-1 items-center">
+                <div className="flex gap-1 items-center">
                   <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
-       
-        <img
-                    
-                    src={user?.photoURL}
-                    alt=""
-                    className="w-[50px] h-[50px] rounded-full cursor-pointer"
-                  />
-      </div>
-              
-              <Link to={"/"} className="" onClick={handleLogOut}>
-                      Log Out
-                    </Link>
-             </div>
+
+                    <img
+
+                      src={user?.photoURL}
+                      alt=""
+                      className="w-[50px] h-[50px] rounded-full cursor-pointer"
+                    />
+                  </div>
+
+                  <Link to={"/login"} className="" onClick={handleLogOut}>
+                    Log Out
+                  </Link>
+                </div>
               ) : (
                 <Link
                   to={"login"}
@@ -112,15 +112,13 @@ const Header = () => {
                     Blog
                   </ActiveLink>
                 </li>
-                {/* <li>
-                                    <Link to="#" className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Features</Link>
-                                </li> */}
+               
               </ul>
             </div>
           </div>
         </nav>
       </header>
- 
+
 
     </div>
   );

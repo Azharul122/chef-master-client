@@ -25,6 +25,7 @@ const Home_content = () => {
   const popularRcipe = reciepsd.filter((rec) => rec.ispular == true);
   return (
     <div>
+      {/* Chefs Section */}
       <h2 className="pt-5 mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
         Your expert Chefs
       </h2>
@@ -56,7 +57,7 @@ const Home_content = () => {
                 reciepe makes:{" "}
                 {reciepsd.filter((reci) => reci.chefId == ch.chefId).length}
               </p>
-              {}
+              { }
               <p>Experience:{ch.chefExperience}</p>
             </div>
             <div className="flex justify-between items-center">
@@ -71,6 +72,8 @@ const Home_content = () => {
           </div>
         ))}
       </section>
+
+      {/* Popular Recipe Section */}
       <h2 className="py-5 mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
         Popular Recipe
       </h2>
@@ -80,9 +83,7 @@ const Home_content = () => {
             className="card border p-2 md:p-5 shadow shadow-blue-500 w-[90%] md:w-[96%] mx-auto"
             key={prec.chefId}
           >
-            {/* {
-                                console.log(ch)
-                            } */}
+         
             <img
               src={prec.photo}
               alt=""
@@ -93,6 +94,7 @@ const Home_content = () => {
         ))}
       </section>
 
+          {/* Custom Recipe Sectioon */}
       <section className="bg-white dark:bg-gray-900">
         <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">

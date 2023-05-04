@@ -6,13 +6,13 @@ import Spinner from '../spinner/Spinner';
 
 
 const Common = () => {
-    const nveigation=useNavigation();
+    const nveigation = useNavigation();
     return (
         <div>
-            <div className="">{nveigation.state=='loading' && <Spinner></Spinner>}</div>
-           <Header></Header>
-           <Outlet></Outlet>
-           <Footer></Footer>
+            <div className="">{nveigation.state == 'loading' && <Spinner></Spinner>}</div>
+            <Header></Header>
+            <Outlet></Outlet>
+            <Footer></Footer>
         </div>
     );
 };
