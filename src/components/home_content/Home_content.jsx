@@ -27,9 +27,23 @@ const Home_content = () => {
       });
   }, []);
 
+  const [showElement,setShowElement] = React.useState(true)
+  useEffect(()=>{
+    setTimeout(function() {
+      setShowElement(false)
+         }, 7000);
+       },
+   [])
   const popularRcipe = reciepsd.filter((rec) => rec.ispular == true);
   return (
     <div>
+{
+  showElement && <div className="" id="messageMe">
+  <p className="text-red-500 text-2xl text-center py-5">Please wait unlit load hero data</p>
+ </div>
+}
+     
+      {/* Loader */}
       {loading && <Spinner></Spinner>}
 
       {/* Header */}
