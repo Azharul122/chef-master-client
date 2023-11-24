@@ -1,0 +1,11 @@
+.postdate::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin: 0 12px 1px;
+  transform: rotate(45deg);
+  transition: 0.4s;
+  background-color: #c38e60;
+}
+

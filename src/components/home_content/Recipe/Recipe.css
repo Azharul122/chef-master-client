@@ -1,0 +1,40 @@
+@keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .infinite-loop {
+    animation: fadeInOut 1s infinite;
+  }
+
+@media screen and (max-width:900px){
+    .recipeFilterSide{
+        top: 80px;
+        left: 0;
+        position: absolute;
+        background-color: black;
+        height: fit-content;
+        z-index: 20;
+        display: none;
+        padding: 10px 5px;
+    }
+    .resipeContentSide{
+        grid-column: span 5 / span 5;
+    }
+    .rexipeMobileFilterIcon{
+        display: block;
+    }
+}
+
+@media screen and (max-width:400px){
+    .recipeImageMobile{
+        height: 180px;
+    }
+}

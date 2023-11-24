@@ -2,6 +2,15 @@ import React, { useEffect, useState } from "react";
 import LazyLoad from "react-lazy-load";
 import { Link } from "react-router-dom";
 import Spinner from "../spinner/Spinner";
+import Hero2 from "./Hero2";
+import FreshProduct from "./FreshProduct";
+import About from "../About/About";
+import Reciepe_menu from "./Reciepe_menu";
+import Magic_Night from "./Magic_Night";
+import ExpartChef from "./ExpartChef";
+import BrandSlide from "./BrandSlide/BrandSlide";
+import TrandingRecipe from "./TrandingRecipe";
+import Blogs from "./Blogs/Blogs";
 // import AwesomeSlider from "react-awesome-slider";
 // import withAutoplay from "react-awesome-slider/dist/autoplay";
 // import "react-awesome-slider/dist/styles.css";
@@ -27,88 +36,60 @@ const Home_content = () => {
       });
   }, []);
 
-  const [showElement,setShowElement] = React.useState(true)
-  useEffect(()=>{
-    setTimeout(function() {
-      setShowElement(false)
-         }, 7000);
-       },
-   [])
+  const [showElement, setShowElement] = React.useState(true);
+  useEffect(() => {
+    setTimeout(function () {
+      setShowElement(false);
+    }, 7000);
+  }, []);
   const popularRcipe = reciepsd.filter((rec) => rec.ispular == true);
   return (
-    <div>
-{
-  showElement && <div className="" id="messageMe">
-  <p className="text-red-500 text-2xl text-center py-5">Please wait unlit load hero data</p>
- </div>
-}
-     
+    <div className="">
+    {/* //   {showElement && (
+    //     <div className="" id="messageMe">
+    //       <p className="text-red-500 text-2xl text-center py-5">
+    //         Please wait unlit load hero data
+    //       </p>
+    //     </div>
+    //   )} */}
+
       {/* Loader */}
       {loading && <Spinner></Spinner>}
 
-      {/* Header */}
-      <h2 className="pt-5 mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
-        Bangladeshi Recipe
-      </h2>
-      {/* Banner */}
-      <div
-        id="default-carousel"
-        className="relative w-full"
-        data-carousel="slide"
-      >
-        <div className="relative h-56 overflow-hidden rounded-lg md:h-96 container mx-auto">
-          <div className="hidden duration-700 ease-in-out " data-carousel-item>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5">
-              <div className="bg-[#374151] flex justify-center items-center py-3 md:py-0 h-[100px] md:h-full">
-                <p className="text-lg md:text-3xl flex  text-white ">
-                  Mutton Curry with Potatoes
-                </p>
-              </div>
-              <div className="md:h-auto h-[200px]">
-                <img
-                  src="https://www.thebangladeshikitchen.com/wp-content/uploads/2020/02/khasir-mangsho-alu-diye-mutton-curry-800x475.jpg"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
+      {/* Hero */}
+      <Hero2></Hero2>
 
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5">
-              <div className="bg-[#374151] flex justify-center items-center py-3 md:py-0 h-[100px] md:h-full">
-                <p className="text-lg flex md:text-3xl   text-white">
-                  Spicy Dry Chicken – Kosha Murgir Mangsho
-                </p>
-              </div>
-              <div className="md:h-auto h-[200px]">
-                <img
-                  src="https://www.thebangladeshikitchen.com/wp-content/uploads/2014/10/KushaMurgi-800x475.png"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
+      {/* Another section */}
+      <FreshProduct></FreshProduct>
 
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5">
-              <div className="bg-[#374151] flex justify-center items-center py-3 md:py-0 h-[100px] md:h-full">
-                <p className="text-lg md:text-3xl  text-white">
-                  Bhuna Khichuri
-                </p>
-              </div>
-              <div className="md:h-auto h-[200px]">
-                <img
-                  src="https://www.thebangladeshikitchen.com/wp-content/uploads/2014/10/BhunaKhichuri-800x475.png"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* Expert Chefs */}
+      <ExpartChef></ExpartChef>
+
+      {/* Tranding Recipe */}
+      <TrandingRecipe></TrandingRecipe>
+      
+       {/* Blogs */}
+       <Blogs></Blogs>
+
+      {/* recipe Menu */}
+      <Reciepe_menu></Reciepe_menu>
+
+      {/* Magic Night */}
+      <Magic_Night></Magic_Night>
+
+
+      {/* Brand Slider */}
+      <BrandSlide></BrandSlide>
+
+      {/* Testomonial section */}
+  
+     
+
+      {/* About US */}
+      <About></About>
 
       {/* Chefs Section */}
-      <h2 className="pt-5 mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+      {/* <h2 className="pt-5 mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
         Our expert Chefs
       </h2>
       <section className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 py-3 md:py-7 w-[90%] md:w-[96%] ">
@@ -117,9 +98,7 @@ const Home_content = () => {
             className="card border p-2 md:p-5 shadow shadow-blue-500"
             key={ch.chefId}
           >
-            {/* {
-                                console.log(ch)
-                            } */}
+            
             <LazyLoad
               threshold={1}
               onContentVisible={() => {
@@ -153,10 +132,10 @@ const Home_content = () => {
             </div>
           </div>
         ))}
-      </section>
+      </section> */}
 
       {/* Popular Recipe Section */}
-      <h2 className="py-5 mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+      {/* <h2 className="py-5 mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
         Popular Recipe
       </h2>
       <section className=" md:container md:mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -173,7 +152,7 @@ const Home_content = () => {
             <h2 className="text-xl md:text-2xl mb-2">{prec.reciepeName}</h2>
           </div>
         ))}
-      </section>
+      </section> */}
 
       {/* Custom Recipe Sectioon */}
       <section className="bg-white dark:bg-gray-900">
