@@ -9,8 +9,8 @@ const FreshProduct = () => {
   return (
     <div>
       <div className="w-full py-5 md:py-10 bg-black">
-        <div className="w-[90%] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div className="w-[97%] md:w-[90%] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-10">
             <div className="text-center">
               <div className=" hover:border border-[#c38e60] rounded-[60px] hover:w-[115px] hover:h-[115px] h-[120px] w-[120px] flex justify-center items-center mx-auto">
                 <img

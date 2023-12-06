@@ -75,20 +75,14 @@ const Header = () => {
     searchContainerElement.classList.add("hidden");
     searchContainerElement.classList.remove("block");
     searchQuery && navigate(`/search-results/${searchQuery}`);
-    const searchInputField=document.querySelector(".searchInputField")
-    searchInputField.value=""
-
+    const searchInputField = document.querySelector(".searchInputField");
+    searchInputField.value = "";
   };
 
   // enter key press search result
   const handleKeyPress = (event) => {
-    // Check if the pressed key is "Enter" (key code 13)
     if (event.key === "Enter") {
-      // Prevent the default behavior of the "Enter" key (e.g., form submission)
       event.preventDefault();
-
-      // Perform your submit action here
-      // For example, you can call a function to handle the form submission
       handleSearchData();
     }
   };
@@ -162,7 +156,7 @@ const Header = () => {
                 <LazyLoad>
                   <Link
                     to={"login"}
-                    className="text-gray-800 dark:text-white hover:white focus:ring-4 focus:ring-gray-300 font-medium text-sm md:text-md px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none bg-[#374151]"
+                    className="text-gray-800 dark:text-white hover:white focus:ring-4 focus:ring-gray-300 font-medium text-sm md:text-md px-2 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none bg-[#374151]"
                   >
                     Log in
                   </Link>

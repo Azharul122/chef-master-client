@@ -1,0 +1,10 @@
+@media screen and (max-width: 770px) {
+  .trannding-recipe-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+  }
+}
+@media screen and (max-width: 450px) {
+  .trannding-recipe-container {
+    grid-template-columns: repeat(1, minmax(0, 1fr))
+  }
+}

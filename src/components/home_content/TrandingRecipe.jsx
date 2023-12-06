@@ -38,7 +38,7 @@ const TrandingRecipe = () => {
         </div>
         {/* Tranding */}
         <section>
-          <div className="  grid grid-cols-1 md:grid-cols-5 gap-10">
+          <div className="trannding-recipe-container  grid grid-cols-1 md:grid-cols-5 gap-10">
             {filteredrecipes.map((fr, index) => (
               <Link
                 to={`recipe/${fr.reciepieId}`}

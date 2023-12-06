@@ -5,7 +5,7 @@ import "./REcipe_menu.css";
 const Reciepe_menu = () => {
   return (
     <div
-      className={`w-full bg-[url(${menuBg})]`}
+      className={`w-full md:bg-[url(${menuBg})] recipe-menue`}
       style={{ backgroundImage: `url(${menuBg})` }}
     >
       <div className="w-[96%] md:w-[90%] mx-auto ">

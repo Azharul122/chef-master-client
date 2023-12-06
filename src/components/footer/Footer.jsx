@@ -2,15 +2,15 @@ import React from "react";
 
 const Footer = () => {
     return (
-        <div>
+        <div className="">
             <footer className="bg-white dark:bg-gray-900">
                 <div className="mx-auto w-full max-w-screen-xl">
-                    <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+                    <div className="grid grid-cols-1 gap-8 px-4 py-6 lg:py-8 lg:grid-cols-4 md:grid-cols-2">
                         <div>
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                                 Company
                             </h2>
-                            <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                            <ul className="text-gray-500 dark:text-gray-400 font-extralight md:font-medium">
                                 <li className="mb-4">
                                     <a href="#" className=" hover:underline">
                                         About
@@ -37,7 +37,7 @@ const Footer = () => {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                                 Help center
                             </h2>
-                            <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                            <ul className="text-gray-500 dark:text-gray-400 font-extralight md:font-medium">
                                 <li className="mb-4">
                                     <a href="#" className="hover:underline">
                                         Discord Server
@@ -64,7 +64,7 @@ const Footer = () => {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                                 Legal
                             </h2>
-                            <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                            <ul className="text-gray-500 dark:text-gray-400 font-extralight md:font-medium">
                                 <li className="mb-4">
                                     <a href="#" className="hover:underline">
                                         Privacy Policy
@@ -86,7 +86,7 @@ const Footer = () => {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                                 Visit Recipe Category
                             </h2>
-                            <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                            <ul className="text-gray-500 dark:text-gray-400 font-extralight md:font-medium">
                                 <li className="mb-4">
                                     <a href="#" className="hover:underline">
                                         Popular Recipe
@@ -111,11 +111,11 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="px-4 py-6 bg-gray-100 dark:bg-gray-700 md:flex md:items-center md:justify-between">
-                        <span className="text-sm text-gray-500 dark:text-gray-300 sm:text-center">
-                            © 2023 <a href="https://flowbite.com/">Chefs™</a>. All Rights
+                        <span className="text-xs md:text-sm text-gray-500 dark:text-gray-300 sm:text-center">
+                            © 2023 <a href="/">Chefs™</a>. All Rights
                             Reserved.
                         </span>
-                        <div className="flex mt-4 space-x-6 sm:justify-center md:mt-0">
+                        <div className="flex mt-2 space-x-2 md:space-x-6 sm:justify-center md:mt-0">
                             <a
                                 href="#"
                                 className="text-gray-400 hover:text-gray-900 dark:hover:text-white"

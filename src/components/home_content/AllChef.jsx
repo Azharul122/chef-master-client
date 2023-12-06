@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import divider from '../../assets/Images/divider.png'
+import divider from "../../assets/Images/divider.png";
 
 const AllChef = () => {
   const [chef, setchef] = useState([]);
@@ -45,29 +45,30 @@ const AllChef = () => {
         </div>
         {/*  */}
         <div className="chef">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 chefCard">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 chefCard">
             {chef.map((ec, index) => (
               <Link
-                className="relative mb-4"
+                className="relative mb-4 md:h-[400px] h-[300px]"
                 key={ec.chefId}
                 onMouseEnter={(e) => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
                 to={`/chef-reciepies/${ec.chefId}`}
-               e
               >
                 <img
                   src={ec.chefPhoto}
                   alt=""
-                  className="mb-2 md:h-[400px] h-[300px] w-[96%] md:w-[90%] mx-auto"
+                  className="h-full  w-[98%] mx-auto"
                 />
                 <div
-                  className={`${
+                  className={` ${
                     HoveredItem == index
-                      ? "w-[200px] flex flex-col gap-3 justify-between items-center"
+                      ? "duration-700 w-[210px] flex flex-col gap-3 justify-between items-center -bottom-[43px]"
                       : ""
-                  } absolute bg-black -bottom-10 right-1/2 w-[200px] md:w-fit translate-x-1/2 py-2 px-3 chefDiv m-3 border-2 border-[#c38e60]`}
+                  } absolute -bottom-9 bg-black w-[150px] right-1/2 translate-x-1/2   py-2 px-3   border-2 border-[#c38e60]`}
                 >
-                  <p className={`font-bold md:text-xl text-lg text-center mb-2`}>
+                  <p
+                    className={`font-bold md:text-xl text-lg text-center mb-2`}
+                  >
                     {ec.chefName}
                   </p>
                   <div className="flex">
@@ -99,7 +100,6 @@ const AllChef = () => {
               </Link>
             ))}
           </div>
-         
         </div>
       </div>
     </div>

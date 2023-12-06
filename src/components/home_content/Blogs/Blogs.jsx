@@ -5,6 +5,7 @@ import { useState } from "react";
 import { BiLike } from "react-icons/bi";
 import "./Blogs.css";
 import { Link } from "react-router-dom";
+import "./../Recipe.css";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
@@ -49,7 +50,13 @@ const Blogs = () => {
                   onMouseLeave={handleLeave}
                   onMouseEnter={() => handleHover(index)}
                 >
-                  <img src={blog.blog_thumbnail} className={`w-full transition-transform transform-gpu ${hovered == index?"scale-90":""}`} alt="" />
+                  <img
+                    src={blog.blog_thumbnail}
+                    className={`w-full transition-transform transform-gpu ${
+                      hovered == index ? "scale-90" : ""
+                    }`}
+                    alt=""
+                  />
                   <div className="w-[90%] mx-auto mt-4">
                     <div className="flex gap-2 items-center mb-3">
                       <p className="text-[#c38e60] postdate">
@@ -71,7 +78,10 @@ const Blogs = () => {
               ))}
           </div>
           <div className="mt-12 p-1 bg-transparent border-[#c19977] border w-[146px] mb-1 md:mb-3 flex justify-center items-center mx-auto">
-            <Link to={"all-blogs"} className="py-2 px-4 bg-[rgb(209,147,92)] text-white hover:bg-gray-500 border border-[#c19977] border-spacing-2">
+            <Link
+              to={"all-blogs"}
+              className="py-2 px-4 bg-[rgb(209,147,92)] text-white hover:bg-gray-500 border border-[#c19977] border-spacing-2"
+            >
               Discover More
             </Link>
           </div>

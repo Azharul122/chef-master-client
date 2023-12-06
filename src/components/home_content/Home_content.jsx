@@ -44,8 +44,8 @@ const Home_content = () => {
   }, []);
   const popularRcipe = reciepsd.filter((rec) => rec.ispular == true);
   return (
-    <div className="">
-    {/* //   {showElement && (
+    <div className="scroll-smooth">
+      {/* //   {showElement && (
     //     <div className="" id="messageMe">
     //       <p className="text-red-500 text-2xl text-center py-5">
     //         Please wait unlit load hero data
@@ -67,9 +67,9 @@ const Home_content = () => {
 
       {/* Tranding Recipe */}
       <TrandingRecipe></TrandingRecipe>
-      
-       {/* Blogs */}
-       <Blogs></Blogs>
+
+      {/* Blogs */}
+      <Blogs></Blogs>
 
       {/* recipe Menu */}
       <Reciepe_menu></Reciepe_menu>
@@ -77,13 +77,10 @@ const Home_content = () => {
       {/* Magic Night */}
       <Magic_Night></Magic_Night>
 
-
       {/* Brand Slider */}
       <BrandSlide></BrandSlide>
 
       {/* Testomonial section */}
-  
-     
 
       {/* About US */}
       <About></About>
