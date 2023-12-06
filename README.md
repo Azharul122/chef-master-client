@@ -6,7 +6,7 @@
 
 ## About project
 
-- Express use to APIa manupulate,
+- Express use to APIs manupulate,
 - React uses for reusable code effieciently
 - Tailwind =>plugin(DaisyUI) 
 - Authentication (Google firebase)
@@ -16,5 +16,4 @@
 
 
 
-# b7a10-chef-recipe-hunter-client-side-Azharul122
-b7a10-chef-recipe-hunter-client-side-Azharul122 created by GitHub Classroom
+
